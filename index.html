@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+   <head><title>Hello world</title></head>
+   <script src="/socket.io/socket.io.js"></script>
+   <script>
+      var socket = io('http://localhost:3000/');
+      io.on('connection',(socket)=>{
+         document.write("connected")
+         socket.emit("number","one")
+      })
+   </script>
+   <body>Hello world</body>
+</html>
